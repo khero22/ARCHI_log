@@ -11,7 +11,7 @@ package com.modules;
 public class NomChamps {
 
     public static final String NOM_APP = "Logiciel ARCHI_log Gestion de Projet pour Bureau d'etude [ version: " + Variables.VERSION + " ]";
-    public static final String ICON = "/ARCHI_log/data/icons/logoGetprim.jpg"; // a modifier par logo ACAD
+    public static final String ICON = "/ARCHI_log/data/icons/logoAcad.jpg"; // a modifier par logo ACAD
     public static final String ICON_BASE = "/ARCHI_log/data/icons/.Ndoc.png";
     public static final String ICON_CLIENT = "/ARCHI_log/data/icons/.Nclient.png";
     public static final String ICON_PROJET = "/ARCHI_log/data/icons/.Nprojet.png";
