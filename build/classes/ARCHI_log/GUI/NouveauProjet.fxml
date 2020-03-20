@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="420.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ARCHI_log.GUI.NouveauProjetController">
+   <children>
+      <VBox prefHeight="402.0" prefWidth="614.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="507.0" text="Nouveau Projet:" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="35.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="180.0" text="Selectionné l'Annee:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comAnnee" prefHeight="25.0" prefWidth="212.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="159.0" text="Selectionné la Categorie:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comCategorie" prefHeight="25.0" prefWidth="233.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="159.0" text="Selectionné le Client:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comClient" prefHeight="25.0" prefWidth="233.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="90.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="128.0" text="Nom du Projet:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextArea fx:id="txtProjet" prefHeight="65.0" prefWidth="272.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnEnregistrer" mnemonicParsing="false" onAction="#enregistrer" prefHeight="25.0" prefWidth="209.0" text="Enregistrer" underline="true">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="200.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

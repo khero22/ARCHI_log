@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ARCHI_log.GUI.MAINController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Quitter">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#Quitter" text="Quitter" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edition">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#NewProjet" text="Nouveau Projet" />
+                        <MenuItem mnemonicParsing="false" onAction="#NewClient" text="Nouveau Client" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#NewCategorie" text="Nouvelle Categorie" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#NewAnnee" text="Nouvelle Annee" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="A propos">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#About" text="A Propos Du Logiciel" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnActualiser" mnemonicParsing="false" onAction="#Actualiser" prefHeight="25.0" prefWidth="206.0" text="Actualiser la Liste" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="20.0" prefWidth="200.0" text="Recherche Nom Projet:" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRecherche">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Separator prefWidth="200.0" />
+                  <Label prefHeight="20.0" prefWidth="200.0" text="Filtrer:" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="200.0" text="Anneé:" textAlignment="JUSTIFY" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboAnnee" prefHeight="25.0" prefWidth="206.0" promptText="Choisir l&quot;année">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label prefHeight="20.0" prefWidth="200.0" text="Categorie:" textAlignment="JUSTIFY" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboCategorie" prefHeight="25.0" prefWidth="206.0" promptText="Choisir la categorie du projet">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label prefHeight="20.0" prefWidth="200.0" text="Client:" textAlignment="JUSTIFY" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboClient" prefHeight="25.0" prefWidth="206.0" promptText="Choix du client">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="btnDeleteFiltre" mnemonicParsing="false" onAction="#DeleteFiltrer" prefHeight="25.0" prefWidth="204.0" text="Effacer Tous les Filtres">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <Label fx:id="txtStatus" prefHeight="17.0" prefWidth="819.0" text="Etat:" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </bottom>
+         <center>
+            <TableView fx:id="tableProjets" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="Annee" minWidth="20.0" prefWidth="60.0" text="Année" />
+                  <TableColumn fx:id="Categorie" minWidth="50.0" prefWidth="100.0" text="Categorie" />
+                  <TableColumn fx:id="Numero" minWidth="25.0" prefWidth="50.0" text="N°" />
+                  <TableColumn fx:id="Client" minWidth="50.0" prefWidth="100.0" text="Client" />
+                  <TableColumn fx:id="Projet" minWidth="120.0" prefWidth="300.0" text="Projet" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
